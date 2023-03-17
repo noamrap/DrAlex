@@ -1,0 +1,29 @@
+﻿.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+    .gallery img {
+        width: 30%;
+        height: auto;
+        margin: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .gallery img:hover {
+            transform: scale(1.2);
+        }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+

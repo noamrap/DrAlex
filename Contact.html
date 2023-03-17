@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>צור קשר</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url("https://media.istockphoto.com/id/1049658692/photo/contact-us.jpg?s=612x612&w=0&k=20&c=hFoLqy8mHjvdPh2HFZQ9pRcO-zzEB9HIENJ7ub2sj80=") font-family: Arial, sans-serif;
+        }
+
+        form {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button[type="submit"]:hover {
+                background-color: #3e8e41;
+            }
+
+        /* New styles for logos */
+        .logo {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .phone-icon {
+            background-image: url(https://cdn-icons-png.flaticon.com/512/74/74877.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .facebook-icon {
+            background-image: url(https://cdn-icons-png.flaticon.com/512/1384/1384053.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .instagram-icon {
+            background-image: url(https://cdn-icons-png.flaticon.com/512/1384/1384063.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+            .logo a {
+                margin: 0 10px;
+            }
+
+        .phone-icon {
+            font-size: 1.5em;
+            margin-left: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form id="contact-form">
+        <a href="https://www.facebook.com/profile.php?id=100012165061161" target="_blank" class="icon facebook-icon"></a>
+        <a href="https://www.instagram.com/doctorrapoport/" target="_blank" class="icon instagram-icon"></a>
+        <a href="tel:0544278007" class="icon phone-icon"></a>
+        <br><br>
+        <label for="full-name">:שם מלא</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="phone-number">:מספר טלפון</label>
+        <input type="text" id="phone-number" name="phone-number" required>
+
+        <label for="appeal-cause">:סיבת הפנייה</label>
+        <textarea id="appeal-cause" name="appeal-cause" rows="4" required></textarea>
+
+        <button type="submit">שלח הודעה</button>
+        <a href="https://www.facebook.com/profile.php?id=100012165061161"><img src="../Images/facebookLogo.png" alt="Facebook logo" class="logo"></a>
+        <a href="https://www.instagram.com/doctorrapoport/"><img src="../Images/instegramLogo.jpg" alt="Instagram logo" class="logo"></a>
+        <div>
+            <a href="tel:054-4278007"><img src="../Images/PhoneCall.png" alt="phone icon" width="32" height="32"></a>
+            <span>054-4278007</span>
+        </div>
+    </form>
+    <br />
+    <br />
+    <br />
+
+    <button onclick="window.location.href='HomePage.html';" style="background-color: cyan; position: fixed; top: 10px; right: 10px; border: none; color: #000000; padding: 10px; border-radius: 50px; cursor: pointer;">בחזרה אל התפריט הראשי</button>
+    <script>
+        $(function () {
+            $('#contact-form').submit(function (event) {
+                event.preventDefault();
+                var fullName = $('#full-name').val();
+                var phoneNumber = $('#phone-number').val();
+                var appealCause = $('#appeal-cause').val();
+                var message = 'שם מלא: ' + fullName + '\nמספר טלפון: ' + phoneNumber + '\nסיבת הפנייה: ' + appealCause;
+                var whatsappLink = 'https://api.whatsapp.com/send?phone=972544278007&text=' + encodeURIComponent(message);
+                window.open(whatsappLink, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

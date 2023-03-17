@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>מעשי נתינה לזולת</title>
+	
+	<style>
+
+       
+        #nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95px;
+            background-color: #221c5a;
+        }
+        h1 {
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+            #nav a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 19px;
+                margin: 0 30px;
+                transition: all 0.3s ease-in-out;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                position: relative;
+            }
+
+                #nav a:hover {
+                    color: #ffbd59;
+                    transform: translateY(-5px);
+                }
+
+                #nav a:before {
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                    background-color: #9d6816;
+                    visibility: hidden;
+                    transform: scaleX(0);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                #nav a:hover:before {
+                    visibility: visible;
+                    transform: scaleX(1);
+                }
+
+                #nav a:first-child:before {
+                    left: 50%;
+                    transform: translateX(-50%) scaleX(0);
+                }
+
+                #nav a:first-child:hover:before {
+                    transform: translateX(-50%) scaleX(1);
+                }
+        .content {
+            padding: 100px 0;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(28, 48, 90, 0.5);
+        }
+  
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 27px;
+            background-color: #f7f7f7;
+        }
+        .header {
+            background: linear-gradient(to right, #0c1c4b, #1c305a);
+        }
+
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px;
+            background-color: #1c305a;
+        }
+
+            .testimonials h2 {
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+        .testimonial-carousel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .testimonial {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+            .testimonial img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+
+            .testimonial p {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.8);
+                opacity: 0;
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            .testimonial:hover p {
+                opacity: 1;
+            }
+
+            .testimonial cite {
+                display: block;
+                margin-top: 10px;
+                font-size: 18px;
+                font-style: italic;
+                text-align: center;
+                color: #333;
+            }
+
+
+
+
+        .banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 420px;
+            background-image: url('https://t4.ftcdn.net/jpg/02/15/90/49/360_F_215904999_pHwPDXLmCg00u92E0yUh24ropSXJLDC0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+            .banner h1 {
+                font-size: 72px;
+                font-weight: 900;
+                text-align: center;
+                margin-bottom: 25px;
+                transition: transform 0.4s ease-in-out;
+                text-shadow: 2px 2px #000;
+            }
+
+                .banner h1:hover {
+                    transform: scale(1.11);
+                }
+
+            .banner p {
+                font-size: 24px;
+                text-align: center;
+                max-width: 800px;
+                margin-bottom: 40px;
+                font-family: 'Fredoka One', cursive;
+                text-shadow: 1px 1px #000;
+            }
+
+
+        .content {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .bg-img {
+            background-image: url('../Images/ט.png');
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30%;
+        }
+
+   
+
+        #myImage {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+
+        #myImage {
+            display: block;
+            margin: 0 auto;
+        }
+      
+	</style>
+</head>
+<body>
+    <!-- Create the NAV BAR -->
+    <div id="nav">
+        <a href="../NETINA.html">טיפולים כתרומה לקהילה בחינם</a>
+        <a href="celebAndGoodThings.html">מפורסמים שביקרו במרפאה</a>
+        <a href="BeforeAndAfter.html">תוצאות טיפולים שונים לפני ואחרי</a>
+        <a href="Reccomends.html">המלצות</a>
+        <a href="Contact.html">רשתות חברתיות, וייעוץ בווצאפ</a>
+        <a href="GallaryClinic.html">תמונות המרפאה</a>
+        <a href="Odot.html">אודות</a>
+
+    </div>
+    <!-- Add the rest of your website content here -->
+
+    <div class="banner">
+        <h1 style="color:#51168d">ברוכים הבאים לאתר מרפאת השיניים של דוקטור רפופורט אלכס</h1>
+        <h2><span class="smiley">😁</span><strong> מכאן תצאו עם חיוך, תרתי משמע</strong></h2>
+
+    </div>
+    <div style="display:flex;">
+        <img src="../Images/Screenshot_41.png" alt="Left Image" style="width:50%; height:auto;">
+        <img src='../Images/upscaler-Screenshot_31-2x.jpg' alt="Right Image" style="width:50%; height:auto;">
+    </div>
+
+
+
+
+</body>
+</html>
